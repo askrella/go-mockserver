@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  mock:
+    build: .
+    environment:
+      MOCK_TARGET: https://google.com
+    ports:
+      - "8080:80/tcp"
