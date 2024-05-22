@@ -5,5 +5,7 @@ services:
     build: .
     environment:
       MOCK_TARGET: https://google.com
+      CACHE_ENABLED: true
+      RECOMPRESS: true
     ports:
       - "8080:80/tcp"
