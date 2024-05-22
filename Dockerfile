@@ -1,14 +1,14 @@
-FROM golang:1.21 as build
+FROM golang:1.22 as build
 
 WORKDIR /go/src/app
 COPY go.mod go.mod
-#COPY go.sum go.sum
+COPY go.sum go.sum
 COPY cmd cmd
 COPY internal internal
 
 RUN go mod download
 
-RUN CGO_ENABLED=0 go build -o /go/bin/app ./cmd/main.go
+RUN CGO_ENABLED=0 go build -ldflags="-w -s" -o /go/bin/app ./cmd/main.go
 
 FROM gcr.io/distroless/static-debian12
 

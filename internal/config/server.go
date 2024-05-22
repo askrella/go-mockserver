@@ -7,6 +7,24 @@ import (
 	"strings"
 )
 
+func Recompress() bool {
+	recompress := os.Getenv("RECOMPRESS")
+	if len(recompress) == 0 {
+		return true
+	}
+
+	return recompress == "true"
+}
+
+func CacheEnabled() bool {
+	cacheEnabled := os.Getenv("CACHE_ENABLED")
+	if cacheEnabled == "" {
+		return true
+	}
+
+	return cacheEnabled == "true"
+}
+
 func GetHost() string {
 	host := os.Getenv("MOCK_HOST")
 	if host == "" {
