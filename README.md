@@ -53,8 +53,8 @@ services:
 
 # :wave: Contributors
 
-<a href="https://github.com/askrella/aws-ses-mock/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=askrella/aws-ses-mock" />
+<a href="https://github.com/askrella/go-mockserver/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=askrella/go-mockserver" />
 </a>
 
 * [Askrella Software Agency](askrella.de)
