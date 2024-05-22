@@ -38,6 +38,7 @@ func InitializeServer() {
 		store.CaptureRequest(r)
 		prepareRequest(r)
 
+		log.Println("Incoming request: " + r.RequestURI)
 		// Forward the request to the target host
 		reverseProxy.ServeHTTP(w, r)
 	})
